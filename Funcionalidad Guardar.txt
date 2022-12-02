@@ -1,0 +1,14 @@
+ // Funcinalidad para guardar los cambios
+        String texto = jTextArea1.getText();
+        PrintWriter pw;
+        if (archivo != null)
+        {
+            try {
+                pw = new PrintWriter(archivo);
+                pw.print(texto);
+                pw.close();
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Miform.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }                  
